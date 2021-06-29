@@ -36,9 +36,9 @@ class ChildViewController: UIViewController {
         
         let child = UIHostingController(rootView: VStack {
             Button(action: {
-                print("Button epta clicked")
+                print("Button clicked")
             }, label: {
-                Text("Tere epta")
+                Text("Tere")
                     .frame(maxWidth: .infinity)
             })
         })

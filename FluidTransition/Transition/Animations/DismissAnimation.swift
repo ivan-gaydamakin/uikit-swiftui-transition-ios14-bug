@@ -21,6 +21,10 @@ class DismissAnimation: NSObject {
         
         animator.addCompletion { (position) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            if transitionContext.transitionWasCancelled {
+//                For fix bug: https://openradar.appspot.com/FB9075949
+//                from.frame = .zero
+            }
         }
         
         return animator
